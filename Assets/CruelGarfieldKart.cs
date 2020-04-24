@@ -16,7 +16,6 @@ public class CruelGarfieldKart : MonoBehaviour {
     public GameObject Screen;
     public GameObject Douche;
     public Material[] Color;
-    public KMSelectable Submit;
 
     private List<string> video = new List<string> {"City1","City2","City3","Danger1","Danger2","Danger3","Hamburger1","Hamburger2","Hamburger3","Hood1","Hood2","Hood3","Incest1","Incest2","Incest3","Iran1","Iran2","Iran3","Lake1","Lake2","Lake3","Last1","Last2","Last3","Mall1","Mall2","Mall3","Manor1","Manor2","Manor3","Oasis1","Oasis2","Oasis3","Pasta1","Pasta2","Pasta3","Pirate1","Pirate2","Pirate3","Pyramid1","Pyramid2","Pyramid3","Skate1","Skate2","Skate3","SneakAPeak1","SneakAPeak2","SneakAPeak3"};
     private List<string> trackname = new List<string>{"City Slicker","City Slicker","City Slicker","Prohibited Site","Prohibited Site","Prohibited Site","Play Misty For Me","Play Misty For Me","Play Misty For Me","Catz in the Hood","Catz in the Hood","Catz in the Hood","Country Bumpkin","Country Bumpkin","Country Bumpkin","Crazy Dunes","Crazy Dunes","Crazy Dunes","Palerock Lake","Palerock Lake","Palerock Lake","Valley of the Kings","Valley of the Kings","Valley of the Kings","Mally Market","Mally Market","Mally Market","Spooky Manor","Spooky Manor","Spooky Manor","Blazing Oasis","Blazing Oasis","Blazing Oasis","Pastacosi Factory","Pastacosi Factory","Pastacosi Factory","Loopy Lagoon","Loopy Lagoon","Loopy Lagoon","Mysterious Temple","Mysterious Temple","Mysterious Temple","Caskou Park","Caskou Park","Caskou Park","Sneak-A-Peak","Sneak-A-Peak","Sneak-A-Peak"};
@@ -57,8 +56,6 @@ public class CruelGarfieldKart : MonoBehaviour {
     int Temptime = 0;
     bool poopyhead = true;
     int Ifunnydotcotwo = 0;
-    int namelognumber = 0;
-    int temporary = 0;
 
     void Awake () {
         moduleId = moduleIdCounter++;
@@ -74,7 +71,7 @@ public class CruelGarfieldKart : MonoBehaviour {
       GetComponent<KMAudio>().PlayGameSoundAtTransform(KMSoundOverride.SoundEffect.ButtonPress, transform);
       if (Button == Buttons[0]) {
         if (fatassretard < 1) {
-          if (poopyhead = true) {
+          if (poopyhead == true) {
           fatassretard = fatassretard + 1;
           }
         }
@@ -142,18 +139,8 @@ public class CruelGarfieldKart : MonoBehaviour {
     }
     private IEnumerator Ihavenoideawhatthisis(){
       Ifunnydotcotwo = UnityEngine.Random.Range(0,Ifunnydotco.Count());
-      temporary = startingbullshit % 3;
-      if (temporary == 0) {
-        temporary = 3;
-      }
       yield return new WaitUntil(() => VideoLoader.clips != null);
       startingbullshit = UnityEngine.Random.Range(0,video.Count());
-      if (Bomb.IsIndicatorOn(Indicator.BOB)) {
-      namelognumber = characternamenumber[startingbullshit + 8];
-      }
-      else {
-        namelognumber = characternamenumber[startingbullshit];
-      }
       urethralinfection = videonumber[startingbullshit];
       tokyodrift = videonumbers[startingbullshit];
       if (Bomb.GetSerialNumber().Any(ch => "GARFIELD".Contains(ch))) {
