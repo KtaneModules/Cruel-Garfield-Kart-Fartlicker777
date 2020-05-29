@@ -59,6 +59,7 @@ public class CruelGarfieldKart : MonoBehaviour
     int Temptime = 0;
     bool poopyhead = true;
     int Ifunnydotcotwo = 0;
+		long Fatass = 0;
 
     void Awake()
 	{
@@ -337,7 +338,8 @@ public class CruelGarfieldKart : MonoBehaviour
 
         if (wipeout[startingbullshit] == true)
 		{
-			calculatingnumber = (calculatingnumber * calculatingnumber) % 1000000;
+			Fatass = (long)calculatingnumber;
+			calculatingnumber = (int)((Fatass * Fatass) % 1000000);
 			Debug.LogFormat("[Cruel Garfield Kart #{0}] You got hit by a pie or a diamond. Squaring your number gives you {1}.", moduleId, calculatingnumber);
         }
 
@@ -429,13 +431,6 @@ public class CruelGarfieldKart : MonoBehaviour
 			break;
 
 			case 15: case 16: case 17: //Iran
-			if (nonbinary == 0)
-			{
-				calculatingnumber = calculatingnumber; //This is also necessary for some god forsaken reason
-			}
-
-			else
-			{
 				Temptime = calculatingnumber;
         while (Temptime != 0)
 		{
@@ -452,7 +447,7 @@ public class CruelGarfieldKart : MonoBehaviour
             Temptime >>= 1;
         }
 				calculatingnumber = calculatingnumber / nonbinary;
-			}
+
 			break;
 
 			case 18: case 19: case 20: //Lake
