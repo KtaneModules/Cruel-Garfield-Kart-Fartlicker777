@@ -29,7 +29,7 @@ public class CruelGarfieldKart : MonoBehaviour
     private List<string> character = new List<string> {"Garfield", "Odie", "Arlene", "Jon", "Harry", "Squeek", "Liz", "Nermal"};
     private List<int> character36 = new List<int> {134,69,109,66,115,132,74,117};
     private List<int> characternumber = new List<int> {0,1,2,3,4,5,6,7};
-    private List<int> characternamenumber = new List<int> {869524,5495,182545,54,81885,971551,296,458312,425968,5945,545281,45,58818,155179,692,213854};
+    private List<int> characternamenumber = new List<int> {869524,5495,182545,54,81885,971511,296,458312,425968,5945,545281,45,58818,115179,692,213854};
     private List<bool> sleepstatus = new List<bool> {false,false,false,false,false,false,false,false,false,true,false,false,false,false,true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,true,false,false,false,false}; //Sleep?
     private List<bool> wipeout = new List<bool> {false,false,false,true,false,false,false,false,false,true,false,false,false,false,false,false,false,false,false,false,false,false,false,true,false,false,false,false,true,false,false,false,false,true,false,false,false,false,false,false,false,false,false,false,false,true,false,false}; //Dead?
     private List<float> Ibewaitingthesebitches = new List<float> {8.5f,9.5f,7.5f,7.5f,11.5f,8.5f,12.5f,18.5f,12.5f,11.5f,8.5f,10.5f,10.75f,9.75f,9.75f,13.5f,8.5f,9.5f,8.5f,10.75f,10.5f,10.5f,10.5f,9.75f,11.5f,12.5f,9.75f,9.5f,13.5f,7.75f,10.75f,8.5f,7.5f,10.5f,9.5f,11.5f,12.75f,8.5f,10.5f,7.5f,6.5f,5.75f,10.5f,12.5f,9.5f,9.5f,9.5f,6.5f};
@@ -59,7 +59,6 @@ public class CruelGarfieldKart : MonoBehaviour
     int Temptime = 0;
     bool poopyhead = true;
     int Ifunnydotcotwo = 0;
-		long Fatass = 0;
 
     void Awake()
 	{
@@ -245,16 +244,19 @@ public class CruelGarfieldKart : MonoBehaviour
 
 		SNConcatenated = Bomb.GetSerialNumberNumbers().ToList();
 		Debug.LogFormat("[Cruel Garfield Kart #{0}] The selected character is {1}.", moduleId, character[startingretard]);
-
         if (Bomb.IsIndicatorOn(Indicator.BOB))
 		{
 			calculatingnumber = (characternamenumber[startingretard + 8] * urethralinfection) % 1000000;
+			Debug.LogFormat("[Cruel Garfield Kart #{0}] Their name in numbers, with respect to BOB, is {1}.", moduleId, characternamenumber[startingretard]);
+			Debug.LogFormat("[Cruel Garfield Kart #{0}] There has been {1} drift(s).", moduleId, videonumbers[startingbullshit]);
 			Debug.LogFormat("[Cruel Garfield Kart #{0}] Your starting value is {1}.", moduleId, calculatingnumber);
         }
 
         else
 		{
 			calculatingnumber = (characternamenumber[startingretard] * urethralinfection) % 1000000;
+			Debug.LogFormat("[Cruel Garfield Kart #{0}] Their name in numbers is {1}.", moduleId, characternamenumber[startingretard]);
+			Debug.LogFormat("[Cruel Garfield Kart #{0}] There has been {1} drift(s).", moduleId, videonumbers[startingbullshit]);
 			Debug.LogFormat("[Cruel Garfield Kart #{0}] Your starting value is {1}.", moduleId, calculatingnumber);
         }
 
@@ -333,13 +335,12 @@ public class CruelGarfieldKart : MonoBehaviour
         else if (speedboost[startingbullshit] == 1)
 		{
 			calculatingnumber += 1;
-			Debug.LogFormat("[Cruel Garfield Kart #{0}] The player hit two speed boosts. Adding 1 gives you {1}.", moduleId, calculatingnumber);
+			Debug.LogFormat("[Cruel Garfield Kart #{0}] The player hit one speed boost. Adding 1 gives you {1}.", moduleId, calculatingnumber);
         }
 
         if (wipeout[startingbullshit] == true)
 		{
-			Fatass = (long)calculatingnumber;
-			calculatingnumber = (int)((Fatass * Fatass) % 1000000);
+			calculatingnumber = (calculatingnumber * calculatingnumber) % 1000000;
 			Debug.LogFormat("[Cruel Garfield Kart #{0}] You got hit by a pie or a diamond. Squaring your number gives you {1}.", moduleId, calculatingnumber);
         }
 
@@ -431,6 +432,7 @@ public class CruelGarfieldKart : MonoBehaviour
 			break;
 
 			case 15: case 16: case 17: //Iran
+
 				Temptime = calculatingnumber;
         while (Temptime != 0)
 		{
@@ -438,18 +440,12 @@ public class CruelGarfieldKart : MonoBehaviour
 			{
 				nonbinary += 1;
       }
-
-			else
-			{
-				binary += 1;
-            }
-
             Temptime >>= 1;
         }
-				calculatingnumber = calculatingnumber / nonbinary;
-
+				if (nonbinary != 0) {
+					calculatingnumber = calculatingnumber / nonbinary;
+				}
 			break;
-
 			case 18: case 19: case 20: //Lake
 			calculatingnumber = (calculatingnumber * calculatingnumber) % 1000000;
 			break;
@@ -505,17 +501,17 @@ public class CruelGarfieldKart : MonoBehaviour
 			break;
 
 			case 39: case 40: case 41: //Pyramid serial number
-			if (SNConcatenated.Count == 4)
+			if (SNConcatenated.Count == 4 && (SNConcatenated[0] * 1000 + SNConcatenated[1] * 100 + SNConcatenated[2] * 10 + SNConcatenated[3]) != 0)
 			{
 				calculatingnumber = calculatingnumber / (SNConcatenated[0] * 1000 + SNConcatenated[1] * 100 + SNConcatenated[2] * 10 + SNConcatenated[3]);
 			}
 
-			else if (SNConcatenated.Count == 3)
+			else if (SNConcatenated.Count == 3 && (SNConcatenated[0] * 100 + SNConcatenated[1] * 10 + SNConcatenated[2]) != 0)
 			{
 				calculatingnumber = calculatingnumber / (SNConcatenated[0] * 100 + SNConcatenated[1] * 10 + SNConcatenated[2]);
 			}
 
-			else if (SNConcatenated.Count == 2)
+			else if (SNConcatenated.Count == 2 && (SNConcatenated[0] * 10 + SNConcatenated[1]) != 0)
 			{
 				calculatingnumber = calculatingnumber / (SNConcatenated[0] * 10 + SNConcatenated[1]);
 			}
