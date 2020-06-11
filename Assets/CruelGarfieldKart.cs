@@ -432,7 +432,7 @@ public class CruelGarfieldKart : MonoBehaviour
 			break;
 
 			case 15: case 16: case 17: //Iran
-
+				nonbinary = 0;
 				Temptime = calculatingnumber;
         while (Temptime != 0)
 		{
