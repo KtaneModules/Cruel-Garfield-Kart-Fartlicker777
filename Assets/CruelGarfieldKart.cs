@@ -11,7 +11,7 @@ using UnityEngine.Video;
 public class CruelGarfieldKart : MonoBehaviour
 {
 
-	public KMBombInfo Bomb;
+		public KMBombInfo Bomb;
     public KMAudio Audio;
     public VideoPlayer WhateverIwant;
     public KMSelectable[] Buttons;
@@ -20,25 +20,25 @@ public class CruelGarfieldKart : MonoBehaviour
     public GameObject Douche;
     public Material[] Color;
 
-	private List<string> video = new List<string> {"City1","City2","City3","Danger1","Danger2","Danger3","Hamburger1","Hamburger2","Hamburger3","Hood1","Hood2","Hood3","Incest1","Incest2","Incest3","Iran1","Iran2","Iran3","Lake1","Lake2","Lake3","Last1","Last2","Last3","Mall1","Mall2","Mall3","Manor1","Manor2","Manor3","Oasis1","Oasis2","Oasis3","Pasta1","Pasta2","Pasta3","Pirate1","Pirate2","Pirate3","Pyramid1","Pyramid2","Pyramid3","Skate1","Skate2","Skate3","SneakAPeak1","SneakAPeak2","SneakAPeak3"};
-    private List<string> trackname = new List<string>{"City Slicker","City Slicker","City Slicker","Prohibited Site","Prohibited Site","Prohibited Site","Play Misty For Me","Play Misty For Me","Play Misty For Me","Catz in the Hood","Catz in the Hood","Catz in the Hood","Country Bumpkin","Country Bumpkin","Country Bumpkin","Crazy Dunes","Crazy Dunes","Crazy Dunes","Palerock Lake","Palerock Lake","Palerock Lake","Valley of the Kings","Valley of the Kings","Valley of the Kings","Mally Market","Mally Market","Mally Market","Spooky Manor","Spooky Manor","Spooky Manor","Blazing Oasis","Blazing Oasis","Blazing Oasis","Pastacosi Factory","Pastacosi Factory","Pastacosi Factory","Loopy Lagoon","Loopy Lagoon","Loopy Lagoon","Mysterious Temple","Mysterious Temple","Mysterious Temple","Caskou Park","Caskou Park","Caskou Park","Sneak-A-Peak","Sneak-A-Peak","Sneak-A-Peak"};
-    private List<int> cupnumber = new List<int> {2,2,2,4,4,4,3,3,3,2,2,2,1,1,1,2,2,2,2,2,2,1,1,1,1,1,1,1,1,1,3,3,3,3,3,3,4,4,4,4,4,4,4,4,4,3,3,3};
-    private List<int> videonumber = new List<int> {2,1,1,4,1,1,3,4,1,3,1,1,1,1,1,1,1,1,1,5,2,2,1,1,1,1,1,3,2,2,2,1,3,3,2,3,2,1,1,5,1,1,3,1,1,2,1,1}; //How they placed in the video
-    private List<int> videonumbers = new List<int> {2,2,2,1,3,2,1,4,1,1,0,1,3,4,3,2,2,1,3,2,2,3,2,2,3,0,3,2,1,1,3,2,1,0,1,1,4,1,0,2,2,0,3,2,1,3,1,1}; //How many drifts
-    private List<int> speedboost = new List<int> {1,1,0,0,0,0,2,2,1,0,2,2,0,0,0,2,1,1,0,1,0,1,1,0,0,0,0,1,0,1,1,0,1,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0}; //How many boosts
+		private List<string> video = new List<string> {"City1", "City2", "City3", "Danger1", "Danger2", "Danger3", "Hamburger1", "Hamburger2", "Hamburger3", "Hood1", "Hood2", "Hood3", "Incest1", "Incest2", "Incest3", "Iran1", "Iran2", "Iran3", "Lake1", "Lake2", "Lake3", "Last1", "Last2", "Last3", "Mall1", "Mall2", "Mall3", "Manor1", "Manor2", "Manor3", "Oasis1", "Oasis2", "Oasis3", "Pasta1", "Pasta2", "Pasta3", "Pirate1", "Pirate2", "Pirate3", "Pyramid1", "Pyramid2", "Pyramid3", "Skate1", "Skate2", "Skate3", "SneakAPeak1", "SneakAPeak2", "SneakAPeak3"};
+    private List<string> trackname = new List<string>{"City Slicker", "City Slicker", "City Slicker", "Prohibited Site", "Prohibited Site", "Prohibited Site", "Play Misty For Me", "Play Misty For Me", "Play Misty For Me", "Catz in the Hood", "Catz in the Hood", "Catz in the Hood", "Country Bumpkin", "Country Bumpkin", "Country Bumpkin", "Crazy Dunes", "Crazy Dunes", "Crazy Dunes", "Palerock Lake", "Palerock Lake", "Palerock Lake", "Valley of the Kings", "Valley of the Kings", "Valley of the Kings", "Mally Market", "Mally Market", "Mally Market", "Spooky Manor", "Spooky Manor", "Spooky Manor", "Blazing Oasis", "Blazing Oasis", "Blazing Oasis", "Pastacosi Factory", "Pastacosi Factory", "Pastacosi Factory", "Loopy Lagoon", "Loopy Lagoon", "Loopy Lagoon", "Mysterious Temple", "Mysterious Temple", "Mysterious Temple", "Caskou Park", "Caskou Park", "Caskou Park", "Sneak-A-Peak", "Sneak-A-Peak", "Sneak-A-Peak"};
+    private List<int> cupnumber = new List<int> {2, 2, 2, 4, 4, 4, 3, 3, 3, 2, 2, 2, 1, 1, 1, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 3, 3, 3};
+    private List<int> videonumber = new List<int> {2, 1, 1, 4, 1, 1, 3, 4, 1, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 5, 2, 2, 1, 1, 1, 1, 1, 3, 2, 2, 2, 1, 3, 3, 2, 3, 2, 1, 1, 5, 1, 1, 3, 1, 1, 2, 1, 1}; //How they placed in the video
+    private List<int> videonumbers = new List<int> {2, 2, 2, 1, 3, 2, 1, 4, 1, 1, 0, 1, 3, 4, 3, 2, 2, 1, 3, 2, 2, 3, 2, 2, 3, 0, 3, 2, 1, 1, 3, 2, 1, 0, 1, 1, 4, 1, 0, 2, 2, 0, 3, 2, 1, 3, 1, 1}; //How many drifts
+    private List<int> speedboost = new List<int> {1, 1, 0, 0, 0, 0, 2, 2, 1, 0, 2, 2, 0, 0, 0, 2, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0}; //How many boosts
     private List<string> character = new List<string> {"Garfield", "Odie", "Arlene", "Jon", "Harry", "Squeek", "Liz", "Nermal"};
-    private List<int> character36 = new List<int> {134,69,109,66,115,132,74,117};
-    private List<int> characternumber = new List<int> {0,1,2,3,4,5,6,7};
-    private List<int> characternamenumber = new List<int> {869524,5495,182545,54,81885,971511,296,458312,425968,5945,545281,45,58818,115179,692,213854};
-    private List<bool> sleepstatus = new List<bool> {false,false,false,false,false,false,false,false,false,true,false,false,false,false,true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,true,false,false,false,false}; //Sleep?
-    private List<bool> wipeout = new List<bool> {false,false,false,true,false,false,false,false,false,true,false,false,false,false,false,false,false,false,false,false,false,false,false,true,false,false,false,false,true,false,false,false,false,true,false,false,false,false,false,false,false,false,false,false,false,true,false,false}; //Dead?
-    private List<float> Ibewaitingthesebitches = new List<float> {8.5f,9.5f,7.5f,7.5f,11.5f,8.5f,12.5f,18.5f,12.5f,11.5f,8.5f,10.5f,10.75f,9.75f,9.75f,13.5f,8.5f,9.5f,8.5f,10.75f,10.5f,10.5f,10.5f,9.75f,11.5f,12.5f,9.75f,9.5f,13.5f,7.75f,10.75f,8.5f,7.5f,10.5f,9.5f,11.5f,12.75f,8.5f,10.5f,7.5f,6.5f,5.75f,10.5f,12.5f,9.5f,9.5f,9.5f,6.5f};
+    private List<int> character36 = new List<int> {134, 69, 109, 66, 115, 132, 74, 117};
+    private List<int> characternumber = new List<int> {0, 1, 2, 3, 4, 5, 6, 7};
+    private List<int> characternamenumber = new List<int> {869524, 5495, 182545, 54, 81885, 971511, 296, 458312, 425968, 5945, 545281, 45, 58818, 115179, 692, 213854};
+    private List<bool> sleepstatus = new List<bool> {false, false, false, false, false, false, false, false, false, true, false, false, false, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true, false, false, false, false}; //Sleep?
+    private List<bool> wipeout = new List<bool> {false, false, false, true, false, false, false, false, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false, true, false, false, false, false, true, false, false, false, false, true, false, false, false, false, false, false, false, false, false, false, false, true, false, false}; //Dead?
+    private List<float> Ibewaitingthesebitches = new List<float> {8.5f, 9.5f, 7.5f, 7.5f, 11.5f, 8.5f, 12.5f, 18.5f, 12.5f, 11.5f, 8.5f, 10.5f, 10.75f, 9.75f, 9.75f, 13.5f, 8.5f, 9.5f, 8.5f, 10.75f, 10.5f, 10.5f, 10.5f, 9.75f, 11.5f, 12.5f, 9.75f, 9.5f, 13.5f, 7.75f, 10.75f, 8.5f, 7.5f, 10.5f, 9.5f, 11.5f, 12.75f, 8.5f, 10.5f, 7.5f, 6.5f, 5.75f, 10.5f, 12.5f, 9.5f, 9.5f, 9.5f, 6.5f};
     private List<int> Cityshitter = new List<int> {};
     private List<int> Finalcalulation = new List<int> {};
-    private List<int> Morsenumberdots = new List<int> {0,1,2,3,4,5,4,3,2,1};
+    private List<int> Morsenumberdots = new List<int> {0, 1, 2, 3, 4, 5, 4, 3, 2, 1};
     private List<int> SNConcatenated = new List<int> {};
-    private List<string> Audiovideo = new List<string> {"City1","City2","City3","Danger1","Danger2","Danger3","Hamburger1","Hamburger2","Hamburger3","Hood1","Hood2","Hood3","Incest1","Incest2","Incest3","Iran1","Iran2","Iran3","Lake1","Lake2","Lake3","Last1","Last2","Last3","Mall1","Mall2","Mall3","Manor1","Manor2","Manor3","Oasis1","Oasis2","Oasis3","Pasta1","Pasta2","Pasta3","Pirate1","Pirate2","Pirate3","Pyramid1","Pyramid2","Pyramid3","Skate1","Skate2","Skate3","SneakAPeak1","SneakAPeak2","SneakAPeak3"};
-    private List<string> cupnamesforlog = new List<string> {"Lasagna","Lasagna","Lasagna","Ice Cream","Ice Cream","Ice Cream","Hamburger","Hamburger","Hamburger","Lasagna","Lasagna","Lasagna","Pizza","Pizza","Pizza","Lasagna","Lasagna","Lasagna","Lasagna","Lasagna","Lasagna","Pizza","Pizza","Pizza","Pizza","Pizza","Pizza","Pizza","Pizza","Pizza","Hamburger","Hamburger","Hamburger","Hamburger","Hamburger","Hamburger","Ice Cream","Ice Cream","Ice Cream","Ice Cream","Ice Cream","Ice Cream","Ice Cream","Ice Cream","Ice Cream","Hamburger","Hamburger","Hamburger"};
+    private List<string> Audiovideo = new List<string> {"City1", "City2", "City3", "Danger1", "Danger2", "Danger3", "Hamburger1", "Hamburger2", "Hamburger3", "Hood1", "Hood2", "Hood3", "Incest1", "Incest2", "Incest3", "Iran1", "Iran2", "Iran3", "Lake1", "Lake2", "Lake3", "Last1", "Last2", "Last3", "Mall1", "Mall2", "Mall3", "Manor1", "Manor2", "Manor3", "Oasis1", "Oasis2", "Oasis3", "Pasta1", "Pasta2", "Pasta3", "Pirate1", "Pirate2", "Pirate3", "Pyramid1", "Pyramid2", "Pyramid3", "Skate1", "Skate2", "Skate3", "SneakAPeak1", "SneakAPeak2", "SneakAPeak3"};
+    private List<string> cupnamesforlog = new List<string> {"Lasagna", "Lasagna", "Lasagna", "Ice Cream", "Ice Cream", "Ice Cream", "Hamburger", "Hamburger", "Hamburger", "Lasagna", "Lasagna", "Lasagna", "Pizza", "Pizza", "Pizza", "Lasagna", "Lasagna", "Lasagna", "Lasagna", "Lasagna", "Lasagna", "Pizza", "Pizza", "Pizza", "Pizza", "Pizza", "Pizza", "Pizza", "Pizza", "Pizza", "Hamburger", "Hamburger", "Hamburger", "Hamburger", "Hamburger", "Hamburger", "Ice Cream", "Ice Cream", "Ice Cream", "Ice Cream", "Ice Cream", "Ice Cream", "Ice Cream", "Ice Cream", "Ice Cream", "Hamburger", "Hamburger", "Hamburger"};
     private List<string> fanfare = new List<string> {"Fanfare"};
 
     static int moduleIdCounter = 1;
@@ -87,7 +87,7 @@ public class CruelGarfieldKart : MonoBehaviour
 		{
 			if (fatassretard < 1)
 			{
-				if (poopyhead == true)
+				if (poopyhead)
 				{
 					fatassretard = fatassretard + 1;
 				}
@@ -133,7 +133,7 @@ public class CruelGarfieldKart : MonoBehaviour
 
 		else if (Button == Buttons[5])
 		{
-			if (fatassretard < 1 && poopyhead == true)
+			if (fatassretard < 1 && poopyhead)
 			{
 				Douche.GetComponent<MeshRenderer>().material = Color[0];
 				WhateverIwant.clip = VideoLoader.clips[startingbullshit];
@@ -164,7 +164,7 @@ public class CruelGarfieldKart : MonoBehaviour
 				moduleSolved = true;
 			}
 
-			else if (moduleSolved == false)
+			else if (!moduleSolved)
 			{
 				GetComponent<KMBombModule>().HandleStrike();
 				Debug.LogFormat("[Cruel Garfield Kart #{0}] You have inputted {1}. Strike, dill hole.", moduleId, pleasesomethingstupid);
@@ -188,16 +188,16 @@ public class CruelGarfieldKart : MonoBehaviour
 
     private IEnumerator Ihavenoideawhatthisis()
 	{
-		Ifunnydotcotwo = UnityEngine.Random.Range(0,Ifunnydotco.Count());
+		Ifunnydotcotwo = UnityEngine.Random.Range(0, Ifunnydotco.Count());
 		yield return new WaitUntil(() => VideoLoader.clips != null);
-		startingbullshit = UnityEngine.Random.Range(0,video.Count());
+		startingbullshit = UnityEngine.Random.Range(0, video.Count());
 		urethralinfection = videonumber[startingbullshit];
 		tokyodrift = videonumbers[startingbullshit];
 		if (Bomb.GetSerialNumber().Any(ch => "GARFIELD".Contains(ch)))
 		{
 			if (Bomb.GetSerialNumber().Any(ch => "KART".Contains(ch)))
 			{
-				if (Bomb.GetOnIndicators().Any(x => new[] { "G", "A", "R", "F", "I", "E", "L", "D", "K", "T" }.Any(y => x.Contains(y))))
+				if (Bomb.GetOnIndicators().Any(x => new[] { "G", "A", "R", "F", "I", "E", "L", "D", "K", "T"}.Any(y => x.Contains(y))))
 				{
 					startingretard = characternumber[2];
 				}
@@ -208,7 +208,7 @@ public class CruelGarfieldKart : MonoBehaviour
 				}
 			}
 
-			else if (Bomb.GetOnIndicators().Any(x => new[] { "G", "A", "R", "F", "I", "E", "L", "D", "K", "T" }.Any(y => x.Contains(y))))
+			else if (Bomb.GetOnIndicators().Any(x => new[] { "G", "A", "R", "F", "I", "E", "L", "D", "K", "T"}.Any(y => x.Contains(y))))
 			{
 				startingretard = characternumber[7];
 			}
@@ -293,7 +293,7 @@ public class CruelGarfieldKart : MonoBehaviour
         }
 
         Debug.LogFormat("[Cruel Garfield Kart #{0}] The amount of 1's in the binary equavalent of your number is {1}. Your new number is {2}.", moduleId, binary, calculatingnumber);
-        if (sleepstatus[startingbullshit] == true)
+        if (sleepstatus[startingbullshit])
 		{
 			calculatingnumber += 522;
 			Debug.LogFormat("[Cruel Garfield Kart #{0}] The player fell asleep, your new number is {1}.", moduleId, calculatingnumber);
@@ -338,7 +338,7 @@ public class CruelGarfieldKart : MonoBehaviour
 			Debug.LogFormat("[Cruel Garfield Kart #{0}] The player hit one speed boost. Adding 1 gives you {1}.", moduleId, calculatingnumber);
         }
 
-        if (wipeout[startingbullshit] == true)
+        if (wipeout[startingbullshit])
 		{
 			calculatingnumber = (calculatingnumber * calculatingnumber) % 1000000;
 			Debug.LogFormat("[Cruel Garfield Kart #{0}] You got hit by a pie or a diamond. Squaring your number gives you {1}.", moduleId, calculatingnumber);
@@ -382,7 +382,7 @@ public class CruelGarfieldKart : MonoBehaviour
 			break;
 
 			case 3: case 4: case 5: //Danger
-			if (character[startingbullshit] == "Garfield" || character[startingbullshit] == "Harry" || character[startingbullshit] == "Nermal" || character[startingbullshit] == "Arlene")
+			if (character[startingretard] == "Garfield" || character[startingretard] == "Harry" || character[startingretard] == "Nermal" || character[startingretard] == "Arlene")
 			{
 			calculatingnumber = calculatingnumber / 9;
 			}
@@ -495,7 +495,7 @@ public class CruelGarfieldKart : MonoBehaviour
 
 			else
 			{
-				total = total / 6;
+				total /= 6;
 				calculatingnumber /= total;
 			}
 			break;
@@ -503,17 +503,17 @@ public class CruelGarfieldKart : MonoBehaviour
 			case 39: case 40: case 41: //Pyramid serial number
 			if (SNConcatenated.Count == 4 && (SNConcatenated[0] * 1000 + SNConcatenated[1] * 100 + SNConcatenated[2] * 10 + SNConcatenated[3]) != 0)
 			{
-				calculatingnumber = calculatingnumber / (SNConcatenated[0] * 1000 + SNConcatenated[1] * 100 + SNConcatenated[2] * 10 + SNConcatenated[3]);
+				calculatingnumber /= (SNConcatenated[0] * 1000 + SNConcatenated[1] * 100 + SNConcatenated[2] * 10 + SNConcatenated[3]);
 			}
 
 			else if (SNConcatenated.Count == 3 && (SNConcatenated[0] * 100 + SNConcatenated[1] * 10 + SNConcatenated[2]) != 0)
 			{
-				calculatingnumber = calculatingnumber / (SNConcatenated[0] * 100 + SNConcatenated[1] * 10 + SNConcatenated[2]);
+				calculatingnumber /= (SNConcatenated[0] * 100 + SNConcatenated[1] * 10 + SNConcatenated[2]);
 			}
 
 			else if (SNConcatenated.Count == 2 && (SNConcatenated[0] * 10 + SNConcatenated[1]) != 0)
 			{
-				calculatingnumber = calculatingnumber / (SNConcatenated[0] * 10 + SNConcatenated[1]);
+				calculatingnumber /= (SNConcatenated[0] * 10 + SNConcatenated[1]);
 			}
 
 			else

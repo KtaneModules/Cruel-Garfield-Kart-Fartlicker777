@@ -14,10 +14,17 @@ MonoBehaviour:
   id: CruelGarfieldKart
   title: Cruel Garfield Kart
   author: Deaf
-  description: 'Come on in to the place where fun never ends;
+  description: 'Come on in to the place where fun never ends; Come on in and join
+    us for Garfield and friends!
 
 
-    Come on in and join us for Garfield and friends!'
+    Identify the track shown to calculate the number you should input.
+
+
+    Manual can be found at ktane.timwi.de
+
+
+    If there are any bugs, contact Fartlicker777#9169 on Discord.'
   version: 1.0
   outputFolder: build
-  previewImage: {fileID: 2800000, guid: b8b04d5c004aae241b5501c197a254ad, type: 3}
+  previewImage: {fileID: 2800000, guid: a6d68d948500b8444a5f932800365e32, type: 3}
