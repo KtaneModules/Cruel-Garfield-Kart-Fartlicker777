@@ -340,7 +340,7 @@ public class CruelGarfieldKart : MonoBehaviour
 
         if (wipeout[startingbullshit])
 		{
-			calculatingnumber = (calculatingnumber * calculatingnumber) % 1000000;
+			calculatingnumber = (int)(((long)calculatingnumber * (long)calculatingnumber) % 1000000);
 			Debug.LogFormat("[Cruel Garfield Kart #{0}] You got hit by a pie or a diamond. Squaring your number gives you {1}.", moduleId, calculatingnumber);
         }
 
