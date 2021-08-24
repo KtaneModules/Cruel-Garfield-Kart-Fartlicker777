@@ -125,10 +125,6 @@ public class CruelGarfieldKart : MonoBehaviour {
          }
       }
 
-      else {
-         Debug.Log("retard");
-      }
-
       if (pleasesomethingstupid > 99999) {
          if (pleasesomethingstupid == cumchalice) {
             Screen.GetComponent<MeshRenderer>().material = Ifunnydotco[Ifunnydotcotwo];
