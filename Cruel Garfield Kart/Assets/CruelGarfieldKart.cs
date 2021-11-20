@@ -320,10 +320,9 @@ public class CruelGarfieldKart : MonoBehaviour {
          case 4:
          case 5: //Danger
             if (character[startingretard] == "Garfield" || character[startingretard] == "Harry" || character[startingretard] == "Nermal" || character[startingretard] == "Arlene") {
-               calculatingnumber /= calculatingnumber;
+               calculatingnumber /= 9;
             }
             break;
-
          case 6:
          case 7:
          case 8: //Hamburger
