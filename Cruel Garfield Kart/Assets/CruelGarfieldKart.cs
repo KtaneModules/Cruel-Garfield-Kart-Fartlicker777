@@ -24,8 +24,8 @@ public class CruelGarfieldKart : MonoBehaviour {
    private List<int> videonumber = new List<int> { 2, 1, 1, 4, 1, 1, 3, 4, 1, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 5, 2, 2, 1, 1, 1, 1, 1, 3, 2, 2, 2, 1, 3, 3, 2, 3, 2, 1, 1, 5, 1, 1, 3, 1, 1, 2, 1, 1 }; //How they placed in the video
    private List<int> videonumbers = new List<int> { 2, 2, 2, 1, 3, 2, 1, 4, 1, 1, 0, 1, 3, 4, 3, 2, 2, 1, 3, 2, 2, 3, 2, 2, 3, 0, 3, 2, 1, 1, 3, 2, 1, 0, 1, 1, 4, 1, 0, 2, 2, 0, 3, 2, 1, 3, 1, 1 }; //How many drifts
    private List<int> speedboost = new List<int> { 1, 1, 0, 0, 0, 0, 2, 2, 1, 0, 2, 2, 0, 0, 0, 2, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0 }; //How many boosts
-   private List<string> character = new List<string> { "Garfield", "Odie", "Arlene", "Jon", "Harry", "Squeek", "Liz", "Nermal" };
-   private List<int> character36 = new List<int> { 134, 69, 109, 66, 115, 132, 74, 117 };
+   private List<string> character = new List<string> { "Garfield", "Odie", "Arlene", "Jon", "Harry", "Squeak", "Liz", "Nermal" };
+   private List<int> character36 = new List<int> { 134, 69, 109, 66, 115, 128, 74, 117 };
    private List<int> characternumber = new List<int> { 0, 1, 2, 3, 4, 5, 6, 7 };
    private List<int> characternamenumber = new List<int> { 869524, 5495, 182545, 54, 81885, 971511, 296, 458312, 425968, 5945, 545281, 45, 58818, 115179, 692, 213854 };
    private List<bool> sleepstatus = new List<bool> { false, false, false, false, false, false, false, false, false, true, false, false, false, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true, false, false, false, false }; //Sleep?
@@ -582,9 +582,10 @@ public class CruelGarfieldKart : MonoBehaviour {
    IEnumerator TwitchHandleForcedSolve () {
       pleasesomethingstupid = 0;
       if (fatassretard != 1) {
-         Buttons[0].OnInteract();
+         Buttons[5].OnInteract();
          yield return new WaitForSeconds(Ibewaitingthesebitches[startingbullshit]);
       }
+      Buttons[0].OnInteract();
       for (int i = 0; i < 6; i++) {
          Buttons[int.Parse(cumchalice.ToString()[i].ToString()) - 1].OnInteract();
          yield return new WaitForSeconds(.1f);
